@@ -8,6 +8,12 @@
   <%= @question.body %>
 </p>
 
+<h4>Question Comments: </h4>
+  <%= render @question.comments %>
+
+<h4>Add a comment: </h4>
+  <%= render 'comments/form' %>
+
 <h2>Answers: </h2>
   <%= render @question.answers %>
 
