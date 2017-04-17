@@ -1,0 +1,17 @@
+<p>
+  <strong>Answerer:</strong>
+  <%= answer.answerer %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= answer.body %>
+</p>
+
+<p>
+  <%= link_to 'Edit Answer', edit_question_answer_path(answer.question, answer) %>
+  <%= link_to 'Delete Answer', [answer.question, answer],
+                                method: :delete,
+                                data: { confirm: "Forreal?" } %>
+
+</p>
