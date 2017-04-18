@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
     @commenter = @question
-    @comment = Comment.new
+    @comment = Comment.new(commentable_type: @commenter.class, commentable_id: @commenter.id)
   end
 
   def edit
